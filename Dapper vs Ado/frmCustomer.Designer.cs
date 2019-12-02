@@ -31,6 +31,7 @@
             this.btnAdo = new System.Windows.Forms.Button();
             this.btnDapper = new System.Windows.Forms.Button();
             this.dgvCustomer = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,14 +63,25 @@
             this.dgvCustomer.Location = new System.Drawing.Point(2, 3);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.RowTemplate.Height = 26;
-            this.dgvCustomer.Size = new System.Drawing.Size(1015, 504);
+            this.dgvCustomer.Size = new System.Drawing.Size(1094, 504);
             this.dgvCustomer.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(730, 529);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 29);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1019, 570);
+            this.ClientSize = new System.Drawing.Size(1098, 589);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvCustomer);
             this.Controls.Add(this.btnDapper);
             this.Controls.Add(this.btnAdo);
@@ -85,6 +97,7 @@
         private System.Windows.Forms.Button btnAdo;
         private System.Windows.Forms.Button btnDapper;
         private System.Windows.Forms.DataGridView dgvCustomer;
+        private System.Windows.Forms.Button button1;
     }
 }
 

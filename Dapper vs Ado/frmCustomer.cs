@@ -27,7 +27,7 @@ namespace Dapper_vs_Ado
                 using (var cmd = new SqlCommand())
                 {
                     cmd.Connection = connection;
-                    cmd.CommandText = "SELECT * FROM Customers";
+                    cmd.CommandText = @"SELECT * FROM Customers";
                     cmd.CommandType = CommandType.Text;
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -55,7 +55,7 @@ namespace Dapper_vs_Ado
         {
             using (IDbConnection connection = new SqlConnection(_connectionString))
             {
-                IEnumerable<Customer> allCustomers = connection.Query<Customer>("SELECT * FROM Customers");
+                IEnumerable<Customer> allCustomers = connection.Query<Customer>(@"SELECT * FROM Customers");
                 return allCustomers;
             }
         }
@@ -70,6 +70,11 @@ namespace Dapper_vs_Ado
             dgvCustomer.DataSource = GetAllCustomersDapper();
         }
 
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            Form test = new Form1();
+            test.Show();
 
+        }
     }
 }
